@@ -1,7 +1,12 @@
 name: test_workflow
 
 on:
-  workflow-dispatch
+  workflow-dispatch:
+    inputs:
+      environment:
+        description: "Environment to deploy to"
+        type: environment
+        required: true
 
 jobs:
   hello:
